@@ -1,0 +1,6 @@
+{
+  "name": "Sistemas de E-Learning UNEMI",
+  "description": "Recurso de aprendizaje interactivo y resumen de las Unidades 1 y 2 con la identidad visual institucional de la UNEMI",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

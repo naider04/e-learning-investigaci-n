@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  
+  --color-unemi-blue: #004080;
+  --color-unemi-orange: #FF6600;
+  --color-unemi-dark: #1e293b;
+}
+
+@layer utilities {
+  .page-break {
+    break-before: page;
+  }
+}
+
+/* Custom Print Styles */
+@media print {
+  body {
+    background-color: #FFFFFF !important;
+    color: #1e293b !important;
+    font-size: 11pt !important;
+  }
+  
+  /* Ensure backgrounds render on print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide print-hidden interactive segments or elements */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Maintain layout columns where possible */
+  .grid {
+    display: grid !important;
+  }
+  
+  /* Prevent cards from breaking awkwardly inside rows */
+  .print-avoid-break {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Set exact margins for standard paper sizes */
+  @page {
+    margin: 1in;
+    size: letter;
+  }
+}
