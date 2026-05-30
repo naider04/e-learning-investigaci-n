@@ -7,6 +7,8 @@ export interface Topic {
   qrLink: string;
   qrDesc: string;
   activityTitle: string;
+  icon?: string;
+  mindmapPath?: string;
 }
 
 export interface Unit {

@@ -3,110 +3,124 @@ import { Unit, GlossaryItem, SuggestedReading } from './types';
 export const UNITS: Unit[] = [
   {
     id: 1,
-    title: "ASPECTOS ESENCIALES Y COMPONENTES DEL E-LEARNING",
+    title: "ESSENTIAL ASPECTS AND COMPONENTS OF E-LEARNING",
     topics: [
       {
         id: "u1t1",
-        title: "Tema 1: Integración de las TIC y el Sistema Educativo",
+        title: "Topic 1: ICT Integration and the Educational System",
         summary: [
-          "El E-learning combina la teoría de la enseñanza con tecnologías de red para permitir el aprendizaje remoto.",
-          "Se fundamenta fuertemente en el Conectivismo, donde el conocimiento resides en la diversidad de opiniones y es un producto continuo de red.",
-          "Las competencias TIC son vitales para el desempeño académico y profesional en medios sociales y redes virtuales."
+          "E-learning combines teaching theory with network technologies to enable flexible remote learning.",
+          "It is strongly grounded in Connectivism, where knowledge resides within a diversity of stakeholder opinions and is a continuous network-based product.",
+          "ICT competencies are vital for academic and professional performance in social media and modern virtual networks."
         ],
         visualType: "mindmap",
-        lessonsLearned: "El e-learning no es solo tecnología; es una transformación pedagógica de fondo que mejora radicalmente la flexibilidad y la eficiencia del acceso al conocimiento humano global.",
+        lessonsLearned: "E-learning is not merely about technology; it is a fundamental pedagogical transformation that radically improves flexibility and the efficiency of accessing worldwide human knowledge.",
         qrLink: "https://quiz.unemi.edu.ec/evaluation-learning-theories",
-        qrDesc: "Escanea el QR para responder un test interactivo sobre teorías del aprendizaje (Cognitivismo, Constructivismo y Conectivismo).",
-        activityTitle: "Quiz Interactivo de Autoevaluación"
+        qrDesc: "Scan the QR code to take an interactive quiz on educational learning theories (Cognitivism, Constructivism, and Connectivism).",
+        activityTitle: "Interactive Self-Assessment Quiz",
+        icon: "icon_broadcast_tower.png",
+        mindmapPath: "U1_T1_ICT_integration.png"
       },
       {
         id: "u1t2",
-        title: "Tema 2: Desarrollo de Contenidos",
+        title: "Topic 2: Content Development",
         summary: [
-          "El contenido educativo puede ser asincrónico (acceso flexible en cualquier momento) o sincrónico (clases e interacciones en vivo en tiempo real).",
-          "Incluye diversos formatos y niveles de interacción: simulaciones interactivas, juegos serios, tests, y recursos multimedia multimedia simples.",
-          "El instructor online actúa como un facilitador polifacético: investigador, experto de contenido, diseñador de experiencias y evaluador constante."
+          "Educational content can be asynchronous (flexible access anytime) or synchronous (live streaming classes and real-time interactions).",
+          "It includes diverse formats and interaction levels such as simulations, serious games, self-tests, and rich text-audio-visual resources.",
+          "An online instructor acts as a multifaceted facilitator: a researcher, a content curator, an experience designer, and a constant evaluator."
         ],
         visualType: "roles",
-        lessonsLearned: "La metodología de e-learning exitosa permite que el estudiante defina libremente su propio ritmo de aprendizaje mediante metas claras y el soporte de múltiples formatos (audio, video, texto).",
+        lessonsLearned: "A successful e-learning methodology allows students to define their own learning pace using clear objectives, milestone schedules, and highly diverse learning media (audio, video, text).",
         qrLink: "https://youtube.com/unemi-elearning-content-design",
-        qrDesc: "Escanea el código QR para ver un video tutorial explicativo sobre el Diseño Instruccional de Contenidos Didácticos.",
-        activityTitle: "Diseño Instruccional: Estructura de Módulos"
+        qrDesc: "Scan the QR code to watch a detailed tutorial video explaining the instructional design of educational digital content.",
+        activityTitle: "Instructional Design: Module Builder",
+        icon: "icon_video_camera.png",
+        mindmapPath: "U1_T2_content_development.png"
       },
       {
         id: "u1t3",
-        title: "Tema 3: Portales Educativos y Culturales",
+        title: "Topic 3: Educational and Cultural Portals",
         summary: [
-          "Los portales funcionan como puertas de enlace especializadas o 'sitios ancla' unificados que centralizan recursos en la web.",
-          "Los recursos modernos de vanguardia incluyen realidad virtual (VR), realidad aumentada (AR), laboratorios interactivos multimedia y enciclopedias colaborativas.",
-          "Ejemplos recomendados institucionalmente: Google Earth, National Geographic Educational y The Wonderment."
+          "Portals act as specialized web gateways or unified 'anchor sites' that centralize digital learning resources.",
+          "Modern cutting-edge resources include virtual reality (VR), augmented reality (AR), rich interactive labs, and collaborative enciclopedias.",
+          "Institutionally recommended examples include Google Earth, National Geographic Educational, and The Wonderment."
         ],
         visualType: "portal",
-        lessonsLearned: "El uso estratégico de portales culturales fomenta de manera exponencial la autonomía del estudiante, permitiéndole construir y personalizar un Entorno Personal de Aprendizaje (PLE).",
+        lessonsLearned: "The strategic use of cultural and educational portals exponentially fosters student autonomy, empowering them to curate and build their own Personal Learning Environment (PLE).",
         qrLink: "https://ar.unemi.edu.ec/augmented-reality-resources",
-        qrDesc: "Escanea el código QR para interactuar con una demostración inmersiva y galería de Realidad Aumentada para la educación.",
-        activityTitle: "Simulador de Entorno de Realidad Aumentada"
+        qrDesc: "Scan the QR code to interact with an immersive augmented reality demonstration and explore next-generation classroom assets.",
+        activityTitle: "Augmented Reality Sandbox Simulator",
+        icon: "icon_globe.png",
+        mindmapPath: "U1_T3_cultural_portals.png"
       },
       {
         id: "u1t4",
-        title: "Tema 4: Redes Sociales como Espacios de Aprendizaje",
+        title: "Topic 4: Social Networks as Learning Spaces",
         summary: [
-          "Las redes sociales rompen barreras geográficas y temporales, requiriendo un nivel mínimo de conocimiento técnico de inicio.",
-          "La Web 2.0 y su arquitectura de participación abren la puerta a la colaboración masiva de conocimiento (ej. Wikipedia, YouTube, Blogs).",
-          "Es crucial aplicar reglas estrictas de netiqueta: rechazo absoluto al ciberbullying, protección celosa de la privacidad personal y mantener el tono profesional."
+          "Social networks break geographical and temporal barriers, requiring very little technical entry barrier to get started.",
+          "Web 2.0 and its core architecture of active participation allow massive collaborative crowdsourced knowledge creation (e.g., Wikipedia, YouTube).",
+          "It is critical to enforce strict netiquette rules: absolute intolerance to cyberbullying, protection of personal privacy, and maintaining professionalism."
         ],
         visualType: "networks",
-        lessonsLearned: "Una red social común evoluciona a un valioso espacio de aprendizaje formal solo cuando se consolidan verdaderas Comunidades de Práctica (CoP) guiadas por reglas claras de convivencia y respeto.",
+        lessonsLearned: "A common social network evolves into a formal learning space only when genuine Communities of Practice (CoP) consolidate under clear guidelines of virtual co-existence and respectful interaction.",
         qrLink: "https://padlet.com/unemi/debate-elearning-networks",
-        qrDesc: "Sigue el QR para participar en un muro colaborativo sobre los límites pedagógicos de las redes sociales en el aula.",
-        activityTitle: "Muro de Debate Colaborativo"
+        qrDesc: "Follow the QR code to join a collaborative Padlet debate regarding the pedagogical and ethical boundaries of social networks.",
+        activityTitle: "Collaborative Discussion Board",
+        icon: "icon_chat_bubble.png",
+        mindmapPath: "U1_T4_social_networking.png"
       }
     ]
   },
   {
     id: 2,
-    title: "PRINCIPALES SISTEMAS Y PLATAFORMAS DE E-LEARNING",
+    title: "PRINCIPAL E-LEARNING SYSTEMS AND PLATFORMS",
     topics: [
       {
         id: "u2t1",
-        title: "Tema 1: Plataformas como Nuevo Espacio de Formación",
+        title: "Topic 1: Platforms as New Educational Settings",
         summary: [
-          "Una plataforma educativa es un entorno virtual integrado que organiza sistemáticamente contenidos y facilita una comunicación multidireccional instantánea.",
-          "Evolución paradigmática continua: E-Learning (puro virtual) → B-Learning (híbrido presencial/virtual) → M-Learning (aprovechamiento móvil) → U-Learning (aprendizaje ubicuo integrado en el entorno)."
+          "An educational platform is an integrated virtual environment that systematically organizes content and facilitates instant multidirectional communication.",
+          "The paradigm is evolving continuously: E-Learning (purely online) → B-Learning (blended/hybrid) → M-Learning (mobile-first accessibility) → U-Learning (ubiquitous learning integrated into daily environments)."
         ],
         visualType: "evolution",
-        lessonsLearned: "Las plataformas modernas integradas facilitan planificar y desplegar cursos interactivos completos en minutos y generar analíticas detalladas y reportes de progreso adaptativos.",
-        qrLink: "https://youtube.com/unemi-ubiquitous-education",
-        qrDesc: "Escanea el QR para ver un documental corto sobre los impactos reales del aprendizaje ubicuo (U-Learning) en las universidades modernas.",
-        activityTitle: "Línea de Tiempo de Evolución del Aprendizaje"
+        lessonsLearned: "Modern integrated platforms make it incredibly easy to configure and launch complete interactive courses in clicks and generate live, customizable progress analytics.",
+        qrLink: "https://es.slideshare.net/slideshow/e-learning-blearning-mlearning-ulearning-c-learningpptx/267314989",
+        qrDesc: "Scan the QR code to read the official SlideShare presentation regarding E-Learning, B-Learning, M-Learning, and U-Learning paradigms.",
+        activityTitle: "Learning Evolution Timeline",
+        icon: "icon_gears.png",
+        mindmapPath: "U2_T1_learning_platforms.png"
       },
       {
         id: "u2t2",
-        title: "Tema 2: Plataformas de E-learning y sus Servicios",
+        title: "Topic 2: E-learning Platforms and Services",
         summary: [
-          "Coexistencia activa de tres actores principales: el Estudiante (centro de acción), el Profesor/Instructor (guía del proceso) y el Administrador (soporte técnico e infraestructura).",
-          "Se agrupan en herramientas de aprendizaje (estrategias), de estructura (diseño del curso) y de productividad (gestión operativa).",
-          "Destacan herramientas de alta productividad integrada como Zoom (videoconferencia sincrónica), Google Docs (trabajo en equipo interactivo) y ProofHub (planificación de objetivos)."
+          "Coexistence is driven by three main actors: the Student (the center of action), the Teacher/Instructor (the process guide), and the Admin (technical backup and infrastructure).",
+          "Tools are grouped into learning-oriented strategies, class structural design templates, and operational productivity tools.",
+          "Prominent productivity integrations include Zoom (synchronous videoconferencing), Google Docs (real-time document editing), and ProofHub (task organization)."
         ],
         visualType: "productivity",
-        lessonsLearned: "La productividad sustentable en el e-learning no es accidental; es el resultado directo de una planificación estratégica rigurosa y un compromiso inquebrantable con la excelencia interactiva.",
+        lessonsLearned: "Sustainable productivity in e-learning is not accidental; it is the direct result of systematic pedagogical planning and an unwavering dedication to interactive excellence.",
         qrLink: "https://proofhub.com/unemi-interactive-tasks-example",
-        qrDesc: "Escanea el código QR para explorar un tablero interactivo funcional para la organización de proyectos educativos.",
-        activityTitle: "Planificador de Tareas del Estudiante Online"
+        qrDesc: "Scan the QR code to view a live project management board example optimized for organizing student assignments.",
+        activityTitle: "Online Student Task Planner",
+        icon: "icon_handshake.png",
+        mindmapPath: "U2_T2_platforms_services.png"
       },
       {
         id: "u2t3",
-        title: "Tema 3: Tipos de Plataformas Educativas",
+        title: "Topic 3: Types of Educational Platforms",
         summary: [
-          "Clasificación en 7 modalidades principales, divididas centralmente por LMS (Learning Management System) y MOOCs (Cursos Online Masivos y Abiertos).",
-          "Software Libre (Open Source): Licencia libre, modificable, adaptable a las necesidades de la institución y sin costos de licenciamiento (ejemplo líder mundial: Moodle).",
-          "Plataformas Propietarias (Comerciales): Entornos robustos de pago con soporte corporativo directo y alta usabilidad inmediata (ejemplos: Coursera, Blackboard, LinkedIn Learning)."
+          "Platforms are categorized into 7 core types, primarily divided between LMS (Learning Management Systems) and MOOCs (Massive Open Online Courses).",
+          "Open Source Software: Free license, fully customizable, reusable, and modifiable to institutional needs without licensing fees (e.g., Moodle, Chamilo).",
+          "Proprietary/Commercial Platforms: Robust paid environments with dedicated enterprise support and streamlined immediate usability (e.g., Coursera, Blackboard)."
         ],
         visualType: "comparison",
-        lessonsLearned: "La estandarización técnica e interoperabilidad (como SCORM o LTI) es crucial para garantizar la durabilidad, accesibilidad y reutilización confiable de contenidos didácticos en cualquier LMS del mercado.",
+        lessonsLearned: "Technical standardization and interoperability guidelines (such as SCORM or LTI) are absolutely crucial to ensure durability, accessibility, and reuse of educational content across diverse systems.",
         qrLink: "https://unemi.edu.ec/lms-detailed-comparative-matrix",
-        qrDesc: "Escanea el QR para descargar la matriz técnica comparativa de los principales LMS comerciales y libres del mercado.",
-        activityTitle: "Selector Inteligente de LMS"
+        qrDesc: "Scan the QR code to download the complete technical comparison matrix of leading proprietary and open-source LMS options.",
+        activityTitle: "Smart LMS Match Selector",
+        icon: "icon_database.png",
+        mindmapPath: "U2_T3_types_platforms.png"
       }
     ]
   }
@@ -114,28 +128,28 @@ export const UNITS: Unit[] = [
 
 export const GLOSSARY: GlossaryItem[] = [
   {
-    term: "Asincrónico",
-    definition: "Modalidad de aprendizaje donde los participantes no coinciden en el tiempo. Permite acceder a recursos y realizar actividades al ritmo personal del estudiante."
+    term: "Asynchronous Learning",
+    definition: "A student-centered instruction method where learning experiences occur outside of real-time. It permits participants to access courseware and engage in activities at their custom pace."
   },
   {
     term: "B-Learning (Blended Learning)",
-    definition: "Modelo educativo mixto o híbrido que combina de forma equilibrada la enseñanza presencial en el aula física con actividades y recursos de aprendizaje virtual."
+    definition: "An educational model representing a hybrid structure that combines classic face-to-face physical classroom sessions with virtual online activities and learning resources."
   },
   {
     term: "LMS (Learning Management System)",
-    definition: "Sistema de gestión de aprendizaje. Software hospedado en un servidor que se emplea para administrar, distribuir, dar seguimiento y evaluar un programa de capacitación virtual."
+    definition: "An integrated software hosted on web servers used to administer, distribute, track, record, and assess virtual learning programs."
   },
   {
     term: "U-Learning (Ubiquitous Learning)",
-    definition: "Aprendizaje ubicuo. Su premisa principal es que el aprendizaje puede ocurrir en cualquier lugar y en cualquier momento, integrándose de forma transparente al entorno mediante dispositivos móviles, sensores e internet."
+    definition: "Omnipresent instruction. The core premise is that learning can happen anywhere, at any moment, seamlessly integrated with daily life through mobile devices, IoT, and high-speed networks."
   },
   {
-    term: "Conectivismo",
-    definition: "Teoría del aprendizaje para la era digital, atribuida a George Siemens. Explica que el conocimiento reside en un ecosistema de redes y el aprendizaje consiste en la habilidad de conectar nodos o fuentes de información."
+    term: "Connectivism",
+    definition: "A learning theory for the digital age, formulated by George Siemens. It suggests that knowledge resides across diverse networks of connections and learning consists of the ability to connect information nodes."
   },
   {
     term: "SCORM",
-    definition: "Conjunto de estándares y especificaciones que permite crear objetos de aprendizaje estructurados susceptibles de ser importados en cualquier plataforma de teleformación compatible."
+    definition: "Sharable Content Object Reference Model. A collection of technical specifications and standards that allows structured digital content to be easily imported and shared across compliant learning management systems."
   }
 ];
 
@@ -145,11 +159,11 @@ export const SUGGESTED_READINGS: SuggestedReading[] = [
     authorOrRef: "UNEMI Educational Sciences Department Quarterly (2024)",
   },
   {
-    title: "Entering the 3rd Generation of e-Learning: Personal Learning Networks and Ubiquitious spaces",
+    title: "Entering the 3rd Generation of e-Learning: Personal Learning Networks and Ubiquitous spaces",
     authorOrRef: "Siemens, G. & Downes, S. (Advanced Pedagogical Research)",
   },
   {
     title: "Standards for learning, teaching, and leading in the digital age - International Society for Technology in Education (ISTE)",
-    authorOrRef: "Official Guidelines and National Policies in High Education (2025)",
+    authorOrRef: "Official Guidelines and National Policies in Higher Education (2025)",
   }
 ];
