@@ -227,17 +227,10 @@ export default function App() {
         <GlossaryAndAnnexes />
 
         {/* DIGITAL ACCESSIBILITY & TRADEMARK BAR */}
-        <div className="py-8 border-t border-slate-100 text-center space-y-2 no-print">
-          <div className="flex justify-center items-center gap-2">
+        <div className="py-8 border-t border-slate-100 text-center no-print">
+          <div className="flex justify-center items-center">
             <UnemiLogo className="w-8 h-8" />
-            <span className="text-xs font-bold text-unemi-blue uppercase tracking-widest font-display">UNEMI</span>
           </div>
-          <p className="text-3xs text-slate-400 font-mono">
-            Designed in full alignment with the Visual Identity and Institutional Guidelines of Universidad Estatal de Milagro.
-          </p>
-          <p className="text-4xs text-slate-400 flex items-center justify-center gap-1 font-mono">
-            Developed by the educational assembly to foster critical self-directed competencies <Heart className="w-2.5 h-2.5 text-unemi-orange fill-unemi-orange" /> 2026
-          </p>
         </div>
 
       </div>

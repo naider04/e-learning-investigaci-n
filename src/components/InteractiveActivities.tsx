@@ -7,13 +7,24 @@ interface ActivityProps {
   qrLink: string;
 }
 
+const OVERRIDE_QR_LINKS: Record<string, string> = {
+  u1t1: "https://e-learning-investigaci-n.onrender.com/",
+  u1t2: "https://www.canva.com/templates/s/syllabus/",
+  u1t4: "https://e-learning-investigaci-n.onrender.com/",
+  u2t1: "https://e-learning-investigaci-n.onrender.com/",
+  u2t2: "https://www.youtube.com/watch?v=l3hkS4ny3SQ",
+  u2t3: "https://e-learning-investigaci-n.onrender.com/",
+};
+
 export const InteractiveActivities: React.FC<ActivityProps> = ({ id, title, qrLink }) => {
+  const finalQrLink = OVERRIDE_QR_LINKS[id] || qrLink;
+
   // Common QR Code renderer as high-contrast official QR code images so it scans and works perfectly
   const renderQRCode = () => {
     return (
       <div className="flex flex-col items-center justify-center p-3 bg-white border border-slate-200 rounded-lg shadow-sm">
         <img 
-          src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(qrLink)}&color=112E51`} 
+          src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(finalQrLink)}&color=112E51`} 
           alt="QR Code link" 
           className="w-24 h-24 object-contain"
           referrerPolicy="no-referrer"
@@ -95,15 +106,19 @@ export const InteractiveActivities: React.FC<ActivityProps> = ({ id, title, qrLi
             <>
               {renderQRCode()}
               <p className="text-2xs text-slate-500 mt-3 font-sans leading-normal">
-                Scan to access additional official virtual resources or study boards.
+                {finalQrLink === "https://e-learning-investigaci-n.onrender.com/"
+                  ? "Open e-book online to do this activity."
+                  : "Scan to access additional official virtual resources or study boards."}
               </p>
               <a 
-                href={qrLink} 
-                target="_blank" 
+                href={finalQrLink} 
+                target="_blank"  
                 rel="noopener noreferrer" 
                 className="text-[10px] text-unemi-orange hover:underline mt-2 font-mono flex items-center gap-1 font-semibold hover:text-orange-700"
               >
-                Open Link <ExternalLink className="w-2.5 h-2.5" />
+                {finalQrLink === "https://e-learning-investigaci-n.onrender.com/"
+                  ? "Open E-Book Link"
+                  : "Open Link"} <ExternalLink className="w-2.5 h-2.5" />
               </a>
             </>
           )}
@@ -214,61 +229,37 @@ const TheoriesQuiz: React.FC = () => {
 
 /* 2. Theme 2: Instructional Content Structure Builder */
 const ContentStructurePlanner: React.FC = () => {
-  const [modules, setModules] = useState<string[]>([
-    "Video Introduction & Core Objectives Map",
-    "Primary Syllabus Reading and Concept Guild",
-    "Audio-Guided Case Analysis (Sync/Async)",
-    "Moderated Debate Discussion & Faculty Feedback",
-    "Final Self-Assessment Quiz"
-  ]);
-  const [newValue, setNewValue] = useState("");
-
-  const addModule = () => {
-    if (!newValue.trim()) return;
-    setModules([...modules, newValue]);
-    setNewValue("");
-  };
-
-  const removeModule = (idx: number) => {
-    setModules(modules.filter((_, i) => i !== idx));
-  };
-
   return (
-    <div className="space-y-3">
-      <p className="text-[11px] text-slate-500 font-sans italic">
-        Configure the recommended structured sequences of an effective e-learning syllabus:
+    <div className="space-y-4 font-sans">
+      <p className="text-[11px] text-slate-500 font-sans italic leading-relaxed">
+        Recommended structured sequence of an effective e-learning syllabus template designed in Canva:
       </p>
 
-      <div className="space-y-1.5 max-h-48 overflow-y-auto pr-1">
-        {modules.map((mod, idx) => (
-          <div key={idx} className="flex justify-between items-center bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-lg">
-            <span className="text-2xs font-mono text-slate-700 flex items-center gap-1.5">
-              <span className="text-3xs text-unemi-orange font-bold font-mono">[{idx + 1}]</span> {mod}
-            </span>
-            <button 
-              onClick={() => removeModule(idx)} 
-              className="text-slate-400 hover:text-red-500 transition-colors no-print"
-            >
-              <Trash className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        ))}
-      </div>
-
-      <div className="flex gap-2 pt-1 no-print">
-        <input 
-          type="text" 
-          value={newValue} 
-          onChange={(e) => setNewValue(e.target.value)}
-          placeholder="Enter a new educational resource..." 
-          className="flex-1 text-2xs px-2.5 py-1.5 border border-slate-200 rounded focus:ring-1 focus:ring-unemi-blue focus:outline-none"
+      {/* Canva Syllabus Image container */}
+      <div className="relative rounded-xl overflow-hidden border border-slate-200 bg-slate-50 p-2 shadow-3xs flex flex-col items-center">
+        <img 
+          src="/canva syllabus.png" 
+          alt="Canva Syllabus Template" 
+          className="w-full max-w-sm h-auto rounded-lg object-contain border border-slate-100 shadow-3xs"
+          referrerPolicy="no-referrer"
         />
-        <button 
-          onClick={addModule}
-          className="text-2xs px-3 py-1.5 bg-unemi-orange text-white rounded font-medium hover:bg-opacity-95"
+        <div className="w-full mt-2.5 bg-white p-2.5 rounded-lg border border-slate-200/50 text-center">
+          <p className="text-3xs font-bold text-unemi-blue uppercase tracking-wider">Visual Syllabus Layout Preview</p>
+          <p className="text-[9px] text-slate-500 mt-0.5">Structured modules, sequencing rules, and timing mappings for virtual school environments.</p>
+        </div>
+      </div>
+      
+      <div className="pt-2 border-t border-slate-100 flex justify-between items-center no-print">
+        <span className="text-3xs uppercase font-mono tracking-wider text-slate-400 font-bold">CANVA ARCHITECTURE</span>
+        <a 
+          href="https://www.canva.com/templates/s/syllabus/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-[10px] text-unemi-blue hover:underline font-mono flex items-center gap-1 font-semibold"
         >
-          Add Item
-        </button>
+          <span>Use Canva Template</span>
+          <span className="text-xs">→</span>
+        </a>
       </div>
     </div>
   );
@@ -492,46 +483,86 @@ const UlearningEvolutionCard: React.FC = () => {
 
 /* 6. Theme 6 (Unit 2 Theme 2): Action-Tool Planner/TaskList Tracker */
 const ProductivityTaskList: React.FC = () => {
-  const [tasks, setTasks] = useState([
-    { id: 1, text: "Prepare interactive concept slides regarding digital portals", done: false, tool: "Google Docs" },
-    { id: 2, text: "Broadcast and record group Q&A session with active classes", done: true, tool: "Zoom" },
-    { id: 3, text: "Organize project submission checklists and final timeline deadlines", done: false, tool: "ProofHub" }
-  ]);
-
-  const toggleTask = (id: number) => {
-    setTasks(tasks.map(t => t.id === id ? { ...t, done: !t.done } : t));
-  };
-
   return (
-    <div className="space-y-2.5">
-      <p className="text-[10px] text-slate-500 mb-1">
-        Simulate a teacher's workflow tracking by checking off tasks linked to productivity tools:
-      </p>
+    <div className="space-y-4 font-sans text-slate-700">
+      <div className="border-l-4 border-unemi-blue pl-3 py-0.5 space-y-1">
+        <h4 className="font-bold text-xs text-unemi-blue uppercase tracking-wide font-display">
+          📋 Productivity Tools for Teachers
+        </h4>
+        <p className="text-[10px] text-slate-500">
+          These real-world digital platforms assist contemporary educators in managing tasks and monitoring student workflows:
+        </p>
+      </div>
 
-      <div className="space-y-1.5">
-        {tasks.map(t => (
-          <div 
-            key={t.id} 
-            onClick={() => toggleTask(t.id)}
-            className="flex items-center gap-3 bg-slate-50 border border-slate-200/50 p-2 rounded-lg cursor-pointer hover:bg-slate-100/50 transition-all select-none"
-          >
-            <div className={`h-4 w-4 rounded border flex items-center justify-center ${
-              t.done ? 'bg-unemi-blue border-unemi-blue text-white' : 'border-slate-300 bg-white'
-            }`}>
-              {t.done && <Check className="w-3 h-3 stroke-[3]" />}
-            </div>
-            
-            <div className="flex-1 min-w-0">
-              <span className={`text-2xs truncate block ${t.done ? 'line-through text-slate-400' : 'text-slate-800'}`}>
-                {t.text}
-              </span>
-            </div>
-            
-            <span className="text-[9px] font-mono font-medium px-2 py-0.5 bg-orange-100 text-unemi-orange rounded">
-              {t.tool}
-            </span>
+      <div className="grid grid-cols-1 gap-2.5">
+        <div className="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 hover:bg-slate-100/65 border border-slate-150 transition-colors">
+          <span className="text-xs">📄</span>
+          <div className="text-2xs leading-normal">
+            <strong className="text-slate-800">Google Docs</strong> –{" "}
+            <a 
+              href="https://docs.google.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-unemi-orange font-bold hover:underline"
+            >
+              Configure slides & collaborative sheets
+            </a>
           </div>
-        ))}
+        </div>
+
+        <div className="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 hover:bg-slate-100/65 border border-slate-150 transition-colors">
+          <span className="text-xs">🎥</span>
+          <div className="text-2xs leading-normal">
+            <strong className="text-slate-800">Zoom Meetings</strong> –{" "}
+            <a 
+              href="https://zoom.us" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-unemi-orange font-bold hover:underline"
+            >
+              Record interactive video classes
+            </a>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 hover:bg-slate-100/65 border border-slate-150 transition-colors">
+          <span className="text-xs">📋</span>
+          <div className="text-2xs leading-normal">
+            <strong className="text-slate-800">ProofHub Pages</strong> –{" "}
+            <a 
+              href="https://www.proofhub.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-unemi-orange font-bold hover:underline"
+            >
+              Plan delivery schedules & milestones
+            </a>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 hover:bg-slate-100/65 border border-slate-150 transition-colors">
+          <span className="text-xs">📊</span>
+          <div className="text-2xs leading-normal">
+            <strong className="text-slate-800">Trello Boards</strong> –{" "}
+            <a 
+              href="https://trello.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-unemi-orange font-bold hover:underline"
+            >
+              Track weekly self-assessment tasks
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="p-3 rounded-lg bg-orange-50 border border-orange-100/80 text-[10px] leading-relaxed text-slate-600">
+        <p className="font-bold text-unemi-orange mb-0.5 flex items-center gap-1 text-[9px] uppercase tracking-wide font-display">
+          <span>💡</span> Teachers Video Guide: Oxford Classroom
+        </p>
+        <p className="text-[10px] text-slate-500">
+          New mobile phones, tablets, apps, and websites are driving changes in education for both learners and teachers, improving professional development and project design.
+        </p>
       </div>
     </div>
   );

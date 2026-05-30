@@ -49,9 +49,9 @@ export const BookShell: React.FC<BookShellProps> = ({ onScrollToSection }) => {
             <UnemiLogo className="w-[265px] h-auto" />
           </div>
 
-          <div className="inline-flex items-center gap-2 bg-blue-50 text-unemi-blue border border-blue-100 px-4 py-1.5 rounded-full">
-            <BookOpen className="w-4 h-4 text-unemi-orange" />
-            <span className="text-2xs font-bold uppercase tracking-wider font-display">Educational Information Systems</span>
+          <div className="inline-flex items-center justify-center gap-2 bg-blue-50 text-unemi-blue border border-blue-100 px-4 py-1.5 rounded-full select-none">
+            <GraduationCap className="w-4 h-4 text-unemi-orange shrink-0" />
+            <span className="text-2xs font-bold uppercase tracking-wider font-display leading-none">Pedagogy of National and Foreign Languages</span>
           </div>
           
           <h1 className="text-3xl md:text-5xl font-extrabold text-unemi-blue leading-tight tracking-tight font-display max-w-4xl mx-auto">
@@ -111,8 +111,10 @@ export const BookShell: React.FC<BookShellProps> = ({ onScrollToSection }) => {
             <p className="font-bold text-unemi-blue text-2xs md:text-xs">UNEMI (State University of Milagro)</p>
           </div>
           <div className="space-y-1">
-            <span className="text-3xs text-slate-400 uppercase tracking-wider font-mono">Author / Developed By</span>
-            <p className="font-bold text-slate-800 text-2xs md:text-xs">W. Patino C.</p>
+            <span className="text-3xs text-slate-400 uppercase tracking-wider font-mono">Author / Student</span>
+            <p className="font-bold text-slate-800 text-2xs md:text-xs uppercase">George Leonel Santos Pinargote</p>
+            <p className="text-[10px] font-mono text-slate-400 lowercase select-all font-semibold -mt-0.5">gsantosp2@unemi.edu.ec</p>
+            <p className="text-[9px] text-slate-500 font-sans leading-tight mt-0.5">Pedagogy of National and Foreign Languages</p>
           </div>
           <div className="space-y-1">
             <span className="text-3xs text-slate-400 uppercase tracking-wider font-mono">Publish Date</span>
@@ -126,26 +128,25 @@ export const BookShell: React.FC<BookShellProps> = ({ onScrollToSection }) => {
       </div>
 
       {/* ONLINE ADMISSION PORTAL — DIAGNOSTIC ENTRY SLIP */}
-      <div className="page-break bg-gradient-to-br from-slate-900 to-unemi-blue text-white rounded-2xl p-8 md:p-12 mb-12 shadow-xl relative overflow-hidden border border-slate-800">
-        <div className="absolute right-0 bottom-0 opacity-[0.08] pointer-events-none translate-x-8 translate-y-8 no-print">
-          <img src="/icon_broadcast_tower.png" alt="" className="w-56 h-56 object-contain" referrerPolicy="no-referrer" />
-        </div>
-        <div className="absolute top-0 right-12 w-1.5 h-16 bg-unemi-orange no-print" />
+      <div className="page-break bg-slate-50 border-2 border-dashed border-indigo-200/80 rounded-2xl p-8 md:p-12 mb-12 shadow-xs relative overflow-hidden">
+        {/* Subtle decorative purple corner accent */}
+        <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full translate-x-12 -translate-y-12" />
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-indigo-600" /> {/* Typical Google Form header color strip */}
 
         <div className="flex flex-col md:flex-row gap-8 items-center relative z-10">
           <div className="flex-1 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full border border-white/20">
-              <img src="/icon_lightbulb.png" alt="" className="w-4 h-4 object-contain" referrerPolicy="no-referrer" />
-              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-orange-200">Pre-Session Checklist</span>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full border border-indigo-100">
+              <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider">Official Google Form Questionnaire</span>
             </div>
             
-            <h2 className="text-xl md:text-2xl font-black font-display tracking-tight text-white uppercase leading-snug">
+            <h2 className="text-xl md:text-2xl font-black font-display tracking-tight text-slate-800 uppercase leading-snug">
               Academic Entrance Portal:<br />
-              <span className="text-unemi-orange">Diagnostic Entry Slip</span>
+              <span className="text-indigo-600">Diagnostic Entry Slip</span>
             </h2>
 
-            <p className="text-xs text-slate-300 leading-relaxed font-sans font-medium">
-              Validate your initial comprehension before addressing Core E-Learning Systems. Undergo the initial study slip on <strong>Learning Environments, Theories, and Activities</strong> to configure your learning targets.
+            <p className="text-xs text-slate-600 leading-relaxed font-sans font-medium">
+              Validate your initial comprehension before addressing Core E-Learning Systems. Undergo the initial study slip on <strong>Learning Environments, Theories, and Activities</strong> via our Google Forms Portal to configure your learning targets.
             </p>
 
             <div className="pt-2 no-print">
@@ -153,23 +154,23 @@ export const BookShell: React.FC<BookShellProps> = ({ onScrollToSection }) => {
                 href="https://docs.google.com/forms/d/e/1FAIpQLScHGh0q-17mR4hYWBUtpm6UiNSeYGVOvn7k-94S_IIa9Q5xhQ/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-unemi-orange hover:bg-orange-600 text-white rounded-xl font-bold font-display text-xs tracking-wide transition-all shadow-md cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold font-display text-xs tracking-wide transition-all shadow-xs cursor-pointer"
               >
-                <span>Access Entry Slip Online</span>
+                <span>Access Google Form</span>
                 <span className="text-sm">→</span>
               </a>
             </div>
           </div>
 
           {/* Interactive QR Generator block */}
-          <div className="w-full md:w-48 shrink-0 flex flex-col items-center p-4 bg-white rounded-xl border border-white/20 shadow-lg text-slate-800">
+          <div className="w-full md:w-48 shrink-0 flex flex-col items-center p-4 bg-white rounded-xl border border-slate-200/60 shadow-xs text-slate-800">
             <img 
-              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://docs.google.com/forms/d/e/1FAIpQLScHGh0q-17mR4hYWBUtpm6UiNSeYGVOvn7k-94S_IIa9Q5xhQ/viewform&color=112E51" 
+              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://docs.google.com/forms/d/e/1FAIpQLScHGh0q-17mR4hYWBUtpm6UiNSeYGVOvn7k-94S_IIa9Q5xhQ/viewform&color=4F46E5" 
               alt="QR Code Entry Slip" 
               className="w-32 h-32 md:w-36 md:h-36 object-contain"
               referrerPolicy="no-referrer"
             />
-            <span className="text-[8px] font-mono font-bold text-slate-400 mt-2.5 tracking-wider uppercase">SCAN TO ACCESS TEST</span>
+            <span className="text-[8px] font-mono font-bold text-slate-400 mt-2.5 tracking-wider uppercase">GOOGLE FORM ACCESS</span>
           </div>
         </div>
       </div>
