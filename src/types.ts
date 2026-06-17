@@ -2,7 +2,7 @@ export interface Topic {
   id: string;
   title: string;
   summary: string[];
-  visualType: 'mindmap' | 'roles' | 'portal' | 'networks' | 'evolution' | 'productivity' | 'comparison';
+  visualType: string;
   lessonsLearned: string;
   qrLink: string;
   qrDesc: string;

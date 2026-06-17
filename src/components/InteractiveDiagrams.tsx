@@ -6,71 +6,7 @@ interface DiagramProps {
   topicId?: string;
 }
 
-const ADDITIONAL_DIAGRAMS: Record<string, { src: string; title: string; desc: string }[]> = {
-  u1t1: [
-    {
-      src: "/diagram_connectivism_cycle.png",
-      title: "Connectivism Cybernetic Learning Cycle",
-      desc: "Observe → Pattern recognition → Network formation → Knowledge creation circular flow."
-    }
-  ],
-  u1t2: [
-    {
-      src: "/diagram_teacher_competences.png",
-      title: "Academic Teacher Competences Radial Matrix",
-      desc: "The 8 instructor competences centered around planning, digital curation, continuous evaluation, and feedback."
-    }
-  ],
-  u1t3: [],
-  u1t4: [
-    {
-      src: "/diagram_social_network_flowchart.png",
-      title: "Social Network Classroom Setup Flowchart",
-      desc: "Pragmatic 5-step checklist workflow: Choose platform → Create group → Set rules → Invite → Start activities."
-    },
-    {
-      src: "/diagram_web1_vs_web2.png",
-      title: "Web 1.0 vs Web 2.0 Architectural Pivot",
-      desc: "Active structural transformation from reader-only (static) sites into dynamic, interactive, user-contributed social feeds."
-    }
-  ],
-  u2t1: [
-    {
-      src: "/diagram_evolution_timeline.png",
-      title: "Paradigmatic Evolution Timeline",
-      desc: "Decadal evolution: 1990s (CD-ROM / local files) → 2000s (LMS portals) → 2010s (Mobile / micro-tasks) → 2020s (Ambient AI & Ubiquitous spaces)."
-    },
-    {
-      src: "/diagram_five_trends.png",
-      title: "The Five Core Platform Trends",
-      desc: "5 structural hexagons: Blended Learning, Gamification, Microlearning, Personalized Learning, and Continuous Learning."
-    },
-    {
-      src: "/diagram_nine_platforms_grid.png",
-      title: "Software Platforms: 3x3 Taxonomy Matrix",
-      desc: "Comprehensive structure representing nine distinct software platform varieties (Technology, Computing, Utility, etc.)."
-    }
-  ],
-  u2t2: [
-    {
-      src: "/diagram_three_actors.png",
-      title: "The Three Pillars of E-Learning Platforms",
-      desc: "Venn relationship mapping: overlapping domains and responsibilities of the Learner, the Instructor, and the Administrator."
-    }
-  ],
-  u2t3: [
-    {
-      src: "/diagram_free_vs_commercial.png",
-      title: "Open Source vs Proprietary LMS Solutions",
-      desc: "Comprehensive comparison mapping Moodle's infinite customization capabilities vs Coursera's instant enterprise-ready cloud SLA setups."
-    },
-    {
-      src: "/diagram_standardization_criteria.png",
-      title: "Syllabus Quality Standards Checklist",
-      desc: "6 universal educational software criteria: Accessibility, Interoperability, Reusability, Durability, Maintainability, and Adaptability."
-    }
-  ]
-};
+const ADDITIONAL_DIAGRAMS: Record<string, { src: string; title: string; desc: string }[]> = {};
 
 export const InteractiveDiagrams: React.FC<DiagramProps> = ({ mindmapPath, topicId }) => {
   const [zoomImg, setZoomImg] = useState<{ src: string; title: string; desc: string } | null>(null);
