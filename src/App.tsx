@@ -123,8 +123,8 @@ export default function App() {
                       </div>
 
                       <div className="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center text-[9px] font-mono text-slate-400">
-                        <div className="flex items-center gap-1.5">
-                          <UnemiLogo className="w-5 h-5 shrink-0" />
+                        <div className="flex items-center gap-2">
+                          <UnemiLogo className="w-16 h-5 shrink-0" />
                           <span>UNEMI MODULE LAUNCH SHEET</span>
                         </div>
                         <span className="font-bold">PAGE {unit.id === 1 ? "06" : "21"} / 34</span>
@@ -277,8 +277,8 @@ export default function App() {
 
                         {/* Page Footer */}
                         <div className="mt-auto pt-6 border-t border-slate-100 flex justify-between items-center text-[9px] font-mono text-slate-400">
-                          <div className="flex items-center gap-1.5">
-                            <UnemiLogo className="w-5 h-5 shrink-0" />
+                          <div className="flex items-center gap-2">
+                            <UnemiLogo className="w-16 h-5 shrink-0" />
                             <span>GEORGE SANTOS - E-LEARNING SYLLABUS BOOK</span>
                           </div>
                           <span className="font-bold">PAGE {pageNum < 10 ? `0${pageNum}` : pageNum} / 34</span>
@@ -320,8 +320,8 @@ export default function App() {
                       </div>
 
                       <div className="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center text-[9px] font-mono text-slate-400">
-                        <div className="flex items-center gap-1.5">
-                          <UnemiLogo className="w-5 h-5 shrink-0" />
+                        <div className="flex items-center gap-2">
+                          <UnemiLogo className="w-16 h-5 shrink-0" />
                           <span>MODULE PERFORMANCE REPORT</span>
                         </div>
                         <span className="font-bold">PAGE {unit.id === 1 ? "20" : "33"} / 34</span>
