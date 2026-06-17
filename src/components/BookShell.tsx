@@ -124,7 +124,10 @@ export const BookShell: React.FC<BookShellProps> = ({ onScrollToSection, current
 
           {/* Page Footer */}
           <div className="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center text-[9px] font-mono text-slate-400">
-            <span>UNEMI STATE UNIVERSITY</span>
+            <div className="flex items-center gap-1.5">
+              <UnemiLogo className="w-5 h-5 shrink-0" />
+              <span>UNEMI STATE UNIVERSITY</span>
+            </div>
             <span className="font-bold">PAGE 01 / 34</span>
           </div>
         </div>
@@ -179,7 +182,10 @@ export const BookShell: React.FC<BookShellProps> = ({ onScrollToSection, current
           </div>
 
           <div className="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center text-[9px] font-mono text-slate-400">
-            <span>ADMINISTRATIVE RECORD SHEET</span>
+            <div className="flex items-center gap-1.5">
+              <UnemiLogo className="w-5 h-5 shrink-0" />
+              <span>ADMINISTRATIVE RECORD SHEET</span>
+            </div>
             <span className="font-bold">PAGE 02 / 34</span>
           </div>
         </div>
@@ -219,7 +225,10 @@ export const BookShell: React.FC<BookShellProps> = ({ onScrollToSection, current
           </div>
 
           <div className="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center text-[9px] font-mono text-slate-400">
-            <span>CURRICULAR ALIGNMENT MEMORANDUM</span>
+            <div className="flex items-center gap-1.5">
+              <UnemiLogo className="w-5 h-5 shrink-0" />
+              <span>CURRICULAR ALIGNMENT MEMORANDUM</span>
+            </div>
             <span className="font-bold">PAGE 03 / 34</span>
           </div>
         </div>
@@ -270,7 +279,10 @@ export const BookShell: React.FC<BookShellProps> = ({ onScrollToSection, current
           </div>
 
           <div className="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center text-[9px] font-mono text-slate-400">
-            <span>OFFICIAL GOOGLE FORMS SLIP</span>
+            <div className="flex items-center gap-1.5">
+              <UnemiLogo className="w-5 h-5 shrink-0" />
+              <span>OFFICIAL GOOGLE FORMS SLIP</span>
+            </div>
             <span className="font-bold">PAGE 04 / 34</span>
           </div>
         </div>
@@ -393,7 +405,10 @@ export const BookShell: React.FC<BookShellProps> = ({ onScrollToSection, current
           </div>
 
           <div className="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center text-[9px] font-mono text-slate-400">
-            <span>TABLE OF CONTENTS DOCUMENT GUIDE</span>
+            <div className="flex items-center gap-1.5">
+              <UnemiLogo className="w-5 h-5 shrink-0" />
+              <span>TABLE OF CONTENTS DOCUMENT GUIDE</span>
+            </div>
             <span className="font-bold">PAGE 05 / 34</span>
           </div>
         </div>
@@ -445,7 +460,10 @@ export const GlossaryAndAnnexes: React.FC<{ currentPage?: number; viewMode?: 'bo
           </div>
 
           <div className="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center text-[9px] font-mono text-slate-400">
-            <span>ANNEX A Glossary OF E-LEARNING</span>
+            <div className="flex items-center gap-1.5">
+              <UnemiLogo className="w-5 h-5 shrink-0" />
+              <span>ANNEX A Glossary OF E-LEARNING</span>
+            </div>
             <span className="font-bold">PAGE 33 / 34</span>
           </div>
         </div>
@@ -524,7 +542,10 @@ export const GlossaryAndAnnexes: React.FC<{ currentPage?: number; viewMode?: 'bo
           </div>
 
           <div className="mt-8 border-t border-slate-150 pt-4 flex justify-between items-center text-[9px] font-mono text-slate-400">
-            <span>UNIVERSIDAD ESTATAL DE MILAGRO</span>
+            <div className="flex items-center gap-1.5">
+              <UnemiLogo className="w-5 h-5 shrink-0" />
+              <span>UNIVERSIDAD ESTATAL DE MILAGRO</span>
+            </div>
             <span className="font-bold">PAGE 34 / 34</span>
           </div>
         </div>

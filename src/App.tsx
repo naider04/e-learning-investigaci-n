@@ -80,9 +80,9 @@ export default function App() {
       <div className="max-w-5xl mx-auto relative">
         
         {/* Page Container */}
-        <div className="bg-white p-6 md:p-12 shadow-sm border border-slate-200/80 rounded-3xl min-h-[1000px] flex flex-col justify-between">
+        <div className="space-y-10">
           
-          <div className="space-y-12">
+          <div className="space-y-10">
             {/* Introductory Shell Pages (Pages 1-5) */}
             <BookShell 
               onScrollToSection={handleScrollToSection} 
@@ -103,7 +103,7 @@ export default function App() {
                   
                   {/* UNIT HEADER (Pages 6 and 21) */}
                   {shouldShowUnitHeader(unit.id, currentPage) && (
-                    <div className="page-break flex flex-col justify-between min-h-[900px] border-4 border-unemi-blue p-8 md:p-14 rounded-2xl bg-white relative">
+                    <div className="page-break flex flex-col justify-between min-h-[960px] border-4 border-unemi-blue p-8 md:p-14 rounded-2xl bg-white relative shadow-sm mb-10">
                       <div className="absolute top-0 right-0 w-32 h-32 bg-unemi-orange opacity-5 rounded-full translate-x-12 -translate-y-12" />
                       
                       <div className="my-auto space-y-6">
@@ -123,7 +123,10 @@ export default function App() {
                       </div>
 
                       <div className="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center text-[9px] font-mono text-slate-400">
-                        <span>UNEMI MODULE LAUNCH SHEET</span>
+                        <div className="flex items-center gap-1.5">
+                          <UnemiLogo className="w-5 h-5 shrink-0" />
+                          <span>UNEMI MODULE LAUNCH SHEET</span>
+                        </div>
                         <span className="font-bold">PAGE {unit.id === 1 ? "06" : "21"} / 34</span>
                       </div>
                     </div>
@@ -140,7 +143,7 @@ export default function App() {
                       <div 
                         key={topic.id} 
                         id={topic.id}
-                        className="page-break min-h-[900px] flex flex-col justify-between scroll-mt-24 pb-8"
+                        className="page-break bg-white border border-slate-200 p-8 md:p-14 rounded-2xl shadow-sm min-h-[960px] flex flex-col justify-between scroll-mt-24 mb-10"
                       >
                         <div className="space-y-6">
                           {/* Topic Header */}
@@ -274,7 +277,10 @@ export default function App() {
 
                         {/* Page Footer */}
                         <div className="mt-auto pt-6 border-t border-slate-100 flex justify-between items-center text-[9px] font-mono text-slate-400">
-                          <span>GEORGE SANTOS - E-LEARNING SYLLABUS BOOK</span>
+                          <div className="flex items-center gap-1.5">
+                            <UnemiLogo className="w-5 h-5 shrink-0" />
+                            <span>GEORGE SANTOS - E-LEARNING SYLLABUS BOOK</span>
+                          </div>
                           <span className="font-bold">PAGE {pageNum < 10 ? `0${pageNum}` : pageNum} / 34</span>
                         </div>
                       </div>
@@ -284,7 +290,7 @@ export default function App() {
                   {/* UNIT SUMMARYS SUMMARY REVIEWS (Pages 20 and 33) */}
                   {((unit.id === 1 && (viewMode === 'scroll' || currentPage === 20)) || 
                     (unit.id === 2 && (viewMode === 'scroll' || currentPage === 33))) && (
-                    <div className="page-break flex flex-col justify-between min-h-[900px] border border-slate-200 rounded-2xl p-8 md:p-14 bg-slate-50/20 shadow-2xs relative">
+                    <div className="page-break flex flex-col justify-between min-h-[960px] border border-slate-200 rounded-2xl p-8 md:p-14 bg-white shadow-sm relative mb-10">
                       <div className="space-y-6">
                         <div className="border-b border-slate-200 pb-4">
                           <span className="text-[9px] font-mono font-bold text-unemi-orange uppercase tracking-wider block">
@@ -299,7 +305,7 @@ export default function App() {
                           <p>
                             Verify course benchmarks and review lessons to validate your performance before unlocking upcoming certification sections:
                           </p>
-                          <div className="space-y-3 bg-white p-5 border border-slate-100 rounded-xl">
+                          <div className="space-y-3 bg-slate-50 p-5 border border-slate-100 rounded-xl">
                             <span className="text-3xs uppercase font-mono tracking-widest text-[#94A3B8] font-black block">Verification items:</span>
                             <div className="flex gap-3 items-center">
                               <span className="w-5 h-5 rounded bg-emerald-150 text-emerald-700 font-bold text-3xs flex items-center justify-center">✔</span>
@@ -314,7 +320,10 @@ export default function App() {
                       </div>
 
                       <div className="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center text-[9px] font-mono text-slate-400">
-                        <span>MODULE PERFORMANCE REPORT</span>
+                        <div className="flex items-center gap-1.5">
+                          <UnemiLogo className="w-5 h-5 shrink-0" />
+                          <span>MODULE PERFORMANCE REPORT</span>
+                        </div>
                         <span className="font-bold">PAGE {unit.id === 1 ? "20" : "33"} / 34</span>
                       </div>
                     </div>
@@ -329,7 +338,7 @@ export default function App() {
           </div>
 
           {/* Dynamic footer copyright metadata (No-Print) */}
-          <div className="pt-6 border-t border-slate-100 text-center text-3xs text-slate-400 uppercase font-mono no-print">
+          <div className="pt-6 text-center text-3xs text-slate-400 uppercase font-mono no-print">
             <span className="font-extrabold hover:text-slate-600 transition-colors">UNEMI • Pedagogía de los Idiomas Nacionales y Extranjeros</span>
           </div>
 
